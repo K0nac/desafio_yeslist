@@ -1,0 +1,53 @@
+body{
+    background: #cacaca;
+}
+.container{
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.box{
+    padding: 20px;
+    padding-top: 0px;
+    width: 350px;
+    min-height: 450px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px #888888;
+}
+
+.tittle{
+    background: #263238;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.input-group{
+    margin-bottom: 10px;
+}
+.input-group label{
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.input-group input{
+    width: 90%;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
