@@ -34,6 +34,8 @@ body{
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+/* -----======------ Inputs normais ------=======--------- */
 .input-group{
     margin-bottom: 10px;
 }
@@ -44,7 +46,28 @@ body{
 }
 .input-group input{
     width: 90%;
+    /* margin-bottom: 10px; */
 }
+
+/* -----======------ Input do galao ------=======--------- */
+.input-group-galao{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px #888888;
+    border-radius: 10px;
+    padding: 8px;
+}
+.input-group-galao label{
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.input-group-galao input{
+    width: 90%;
+}
+
+/* -----======------ BOTAO ------=======--------- */
 .button{
     display: flex;
     justify-content: center;

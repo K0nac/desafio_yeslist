@@ -16,27 +16,27 @@
             </div>
             <div class="input-group">
                 <label for="">Quantos litros tem na garrafa 1 ?</label>
-                <input name="g1" type="number">
+                <input name="g[0]" type="number" step="0.01">
             </div>
             <div class="input-group">
                 <label for="">Quantos litros tem na garrafa 2 ?</label>
-                <input name="g2" id="g2" type="number">
+                <input name="g[1]" type="number" step="0.01">
             </div>
             <div class="input-group">
                 <label for="">Quantos litros tem na garrafa 3 ?</label>
-                <input name="g3" type="number">
+                <input name="g[2]" type="number" step="0.01">
             </div>
             <div class="input-group">
                 <label for="">Quantos litros tem na garrafa 4 ?</label>
-                <input name="g4" type="number">
+                <input name="g[3]" type="number" step="0.01">
             </div>
-            <div class="input-group">
+            <div class="input-group ">
                 <label for="">Quantos litros tem na garrafa 5 ?</label>
-                <input name="g5" type="number">
+                <input name="g[4]" type="number" step="0.01">
             </div>
-            <div class="input-group">
+            <div class="input-group-galao">
                 <label for="">Quantidade de àgua no galão (litros):</label>
-                <input name="galao" type="number">
+                <input name="galao" type="number" step="0.01">
             </div>
             <div class="button">
                 <button type="submit">Calcular</button>
