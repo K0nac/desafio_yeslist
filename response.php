@@ -10,6 +10,13 @@
 
     /* Solução do projeto */
 
+    /* Este while Retira valores nulos da array */
+    while (array_search(null, $garrafas)) {
+        $nulo = array_search(null, $garrafas);
+        unset($garrafas[$nulo]);
+    }
+
+    /* Este while ficara percorrendo até que o galão seja igual a 0 */
     while ($galao > 0) {
         /* Pega o menor numero da array */
         $menorNum = min($garrafas);
@@ -18,10 +25,17 @@
 
         /* Subtrai o galao com o MENOR numero*/
         $galao = $galao - $menorNum;
+
+        /* Caso a subtração a cima fique negativa, quer dizer que a "garrafa" */
+        /* Conseguiu preencher todo o galão e ainda sobrou algo dentro dela */
+        /* Este if verificara isso e converte o resultado negativo do galao  */
+        /* Para positivo e o coloca dentro da variavel $resto */
         if($galao < 0){
             $resto = abs($galao);
             $galao = 0;
 
+            /* Caso a subtração não fique negativa, quer dizer que a garrafa esvaziou */
+            /* e ainda tem agua dentro do galão entao o while continua */
         }else{
             /* Pega o maior numero da array */
             $maiorNum = max($garrafas);
@@ -31,10 +45,13 @@
             /* Subtrai o galao  com o MAIOR numero*/
             $galao = $galao - $maiorNum;
             
+            /* Enfim verifica novamente se a subtração ficou negativa*/
+            /* Caso fique negativa, quer dizer que o galão esvaziou  */
+            /* e o valor negativo é o "resto" da agua na garrafa */
+            /* Se ainda houver agua no galão o while se repete */
             if($galao < 0){
                 $resto = abs($galao);
                 $galao = 0;
-            
             
             }
         }
