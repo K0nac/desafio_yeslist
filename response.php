@@ -7,9 +7,7 @@
     $indexMenor = 0;
     $resto = 0;
 
-
-    /* Solução do projeto */
-
+    /* -----========------ Solução do projeto ------========--------- */
     /* Este while Retira valores nulos da array */
     while (array_search(null, $garrafas)) {
         $nulo = array_search(null, $garrafas);
@@ -17,11 +15,12 @@
     }
 
     /* Este while ficara percorrendo até que o galão seja igual a 0 */
-    while ($galao > 0) {
+    while ($galao > 0 && $garrafas == TRUE) {
         /* Pega o menor numero da array */
         $menorNum = min($garrafas);
         $indexMenor = array_search($menorNum, $garrafas);
         unset($garrafas[$indexMenor]);
+        $array[] = $menorNum;
 
         /* Subtrai o galao com o MENOR numero*/
         $galao = $galao - $menorNum;
@@ -41,7 +40,8 @@
             $maiorNum = max($garrafas);
             $indexMaior = array_search($maiorNum, $garrafas);
             unset($garrafas[$indexMaior]);
-            
+            $array[] = $maiorNum;
+
             /* Subtrai o galao  com o MAIOR numero*/
             $galao = $galao - $maiorNum;
             
@@ -55,17 +55,14 @@
             
             }
         }
+
     }
+        /* Transforma a array em uma string */
+        $result = implode("L, ", $array);
 
-
-    /* $msg = "Você tem garrafa1 - {$g[0]}L, garrafa2 - {$g[1]}L, garrafa3 - {$g[2]}L, garrafa4 - {$g[3]}L, garrafa5 - {$g[4]}L, para um galão de $galao"; */
-
-    $msg = "$maiorNum";
-    echo "maior/menor numero da array - $maiorNum - $menorNum <br>";
-    echo "indice no qual vou excluir - $indexMaior - $indexMenor <br>";
-    echo "quanto sobra no galao {$galao}L <br>";
-    echo "Quanto de agua sobrou na garrafa {$resto}L <br>";
-    print_r($garrafas);
-    /* header("location:index.php?msg=$msg"); */
-
+        /* Volta para index enviando a resposta($result) a sobra($resto) */
+        /* e a quantidade de sobra do galao($galao) */
+        $msg = "result=$result&resto=$resto&galao=$galao";
+        
+        header("location:index.php?$msg");
 ?>
